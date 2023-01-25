@@ -1,16 +1,20 @@
 import axios from 'axios';
 
 // eslint-disable-next-line no-undef
-const isMainnet = process.env.REACT_APP_ENV === 'MAINNET';
+const isMainnet = process.env.APP_ENV === 'MAINNET';
+
+// eslint-disable-next-line no-undef
+const apiUrl = 'http://localhost:5001';
+console.log('apiUrl********', apiUrl);
 
 export const useApi = () => {
   const explorerUrl = isMainnet
     ? 'https://ftmscan.com'
     : 'https://testnet.ftmscan.com';
 
-  const apiUrl = isMainnet
-    ? 'https://api.artion.io'
-    : 'https://api.testnet.artion.io';
+  // const apiUrl = isMainnet
+  //   ? 'https://api.artion.io'
+  //   : 'https://api.testnet.artion.io';
 
   // eslint-disable-next-line no-undef
   // const apiUrl = process.env.REACT_APP_API_URI;

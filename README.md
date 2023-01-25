@@ -12,17 +12,21 @@ See [Guide](https://docs.fantom.foundation/tutorials/collection-and-bundle-guide
 
 ## Project Setup
 ```
-npm install / yarn
+# Note that you will need to use Node 14 & yarn
+yarn install
 ```
 
 ## Compile
 ```
-npm run start
+# This is not working for me - too many files open
+yarn run start
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+yarn run build
+yarn add --dev serve
+npx serve -s build
 ```
 
 #### .env file sample

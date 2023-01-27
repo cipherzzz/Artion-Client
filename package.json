@@ -5,7 +5,7 @@
   "private": true,
   "engines": {
     "node": "16",
-    "npm": "6",
+    "npm": "8",
     "yarn": "1.22.x"
   },
   "dependencies": {

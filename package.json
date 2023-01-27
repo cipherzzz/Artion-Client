@@ -130,7 +130,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "build-serve": "yarn run build && yarn serve -s build"
+    "build-serve": "yarn run build && yarn serve -s build",
+    "local-serve": "yarn serve -s build"
   },
   "eslintConfig": {
     "extends": "react-app"

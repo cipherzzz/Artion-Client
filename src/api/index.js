@@ -4,7 +4,7 @@ import axios from 'axios';
 const isMainnet = process.env.APP_ENV === 'MAINNET';
 
 // eslint-disable-next-line no-undef
-const apiUrl = 'http://localhost:5001';
+const apiUrl = 'https://artion-api.herokuapp.com';
 console.log('apiUrl********', apiUrl);
 
 export const useApi = () => {
@@ -23,7 +23,7 @@ export const useApi = () => {
     : 'https://storage.testnet.artion.io';
 
   // const tokenURL = 'https://fetch-tokens.vercel.app/api';
-  // const tokenURL = 'https://api.artion.io/nftitems/fetchTokens';
+  //const tokenURL = 'https://api.artion.io/nftitems/fetchTokens';
 
   const getNonce = async (address, authToken) => {
     const res = await axios({
@@ -256,6 +256,7 @@ export const useApi = () => {
       data.filterby = filterBy;
     }
     data.sortby = sortBy;
+
     const res = await axios({
       method: 'post',
       url: `${apiUrl}/nftitems/fetchTokens`,

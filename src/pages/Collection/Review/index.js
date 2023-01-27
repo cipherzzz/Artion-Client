@@ -66,6 +66,7 @@ const CollectionCreate = () => {
   const fetchCollections = async () => {
     try {
       const { status, data } = await fetchPendingCollections(authToken);
+      console.log(status, data);
       if (status === 'success') {
         setLoading(false);
         setCollections(data);

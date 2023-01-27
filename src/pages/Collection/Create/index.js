@@ -433,6 +433,9 @@ const CollectionCreate = ({ isRegister }) => {
                   telegram,
                   signature,
                 };
+
+                console.log('data: ', data);
+
                 await axios({
                   method: 'post',
                   url: `${apiUrl}/collection/collectiondetails`,
